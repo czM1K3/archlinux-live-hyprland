@@ -1,0 +1,66 @@
+{
+	"layer": "top",
+	"position": "top",
+	"mod": "dock",
+	"exclusive": true,
+	"passthrough": false,
+	"gtk-layer-shell": true,
+	"height": 0,
+	"modules-left": [
+		"wlr/workspaces"
+	],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"tray",
+		"pulseaudio",
+		"pulseaudio#microphone",
+		"upower"
+	],
+	"wlr/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"on-click": "activate",
+		"format": "{icon}",
+		"sort-by-number": true,
+		"persistent_workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": [],
+			"7": [],
+			"8": [],
+			"9": [],
+			"10": []
+		}
+	},
+	"tray": {
+		"icon-size": 16,
+		"spacing": 5
+	},
+	"clock": {
+		"format": "{:%e.%B %R}",
+		"tooltip-format": "<tt>{calendar}</tt>"
+	},
+	"pulseaudio": {
+		"format": "Audio {volume}%",
+		"tooltip": false,
+		"format-muted": "Audio Muted",
+		"on-click": "pamixer -t",
+		"on-scroll-up": "pamixer -i 5",
+		"on-scroll-down": "pamixer -d 5",
+		"scroll-step": 5
+	},
+	"pulseaudio#microphone": {
+		"format": "{format_source}",
+		"format-source": "Microphone {volume}%",
+		"format-source-muted": "Microphone Muted",
+		"on-click": "pamixer --default-source -t",
+		"on-scroll-up": "pamixer --default-source -i 5",
+		"on-scroll-down": "pamixer --default-source -d 5",
+		"scroll-step": 5
+	}
+}
