@@ -36,15 +36,6 @@ tooltip {
 #workspaces button.active {
   color: #fff;
 }
-#workspaces button.focused {
-  color: #fff;
-}
-#workspaces button.urgent {
-  color: #11111b;
-}
-#workspaces button.hidden {
-  color: white;
-}
 
 #clock {
   padding: 0px 7px;
